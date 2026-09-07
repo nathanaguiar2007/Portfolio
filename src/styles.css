@@ -1212,8 +1212,7 @@ a:hover .arrow {
     gap: 0;
     padding: 0.5rem 0 1rem;
   }
-  .navigation-links a,
-  .navigation-links .pending-link {
+  .navigation-links a {
     min-height: 44px;
     display: flex;
     align-items: center;

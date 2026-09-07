@@ -5,7 +5,6 @@ export default function Footer() {
     { label: "Email", href: contact.email ? `mailto:${contact.email}` : "" },
     { label: "GitHub", href: contact.github },
     { label: "LinkedIn", href: contact.linkedin },
-    { label: "Résumé", href: contact.resume },
   ];
 
   return (

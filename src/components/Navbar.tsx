@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router";
-import { contact } from "../data/portfolio";
 
 const navigation = [
   { label: "Work", to: "/#work" },
@@ -68,19 +67,6 @@ export default function Navbar() {
                 {label}
               </NavLink>
             ),
-          )}
-          {contact.resume ? (
-            <a href={contact.resume}>
-              Résumé <span aria-hidden="true">↗</span>
-            </a>
-          ) : (
-            <span
-              className="pending-link"
-              aria-disabled="true"
-              title="Résumé coming soon"
-            >
-              Résumé <span aria-hidden="true">↗</span>
-            </span>
           )}
         </div>
       </nav>

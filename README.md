@@ -89,7 +89,6 @@ Both project URLs share `pages/Project.tsx`, with their content selected from `d
 - **Styles:** Start with `:root` in `src/styles.css` for colors, spacing, typography, radii, shadows, and content widths. The following sections cover shared elements, navigation, hero, projects, experience, skills, gallery, About, contact, detail pages, and responsive rules.
 - **Page composition:** Edit `src/pages/Home.tsx` to rearrange sections.
 - **Images:** Add real project images to `public/images/` or `public/projects/`. Use `${import.meta.env.BASE_URL}images/your-image.jpg` for public asset URLs so they work on GitHub Pages too. Alternatively, import assets from a new `src/assets/` folder and let Vite resolve them.
-- **Résumé:** Add the actual file under `public/resume/`, then update `contact.resume` with a base-aware URL as shown in the data file.
 - **Contact:** Fill the empty strings in `contact` with confirmed public details. Email accepts an address; the component adds `mailto:`. Empty fields display clearly unavailable controls instead of sending visitors to invented URLs.
 
 ## Routes
@@ -135,7 +134,7 @@ The portfolio is actively being developed and updated as new software, AI, and e
 - About needs a professional photo.
 - Robotics has a clean editable experience entry; add confirmed role, organization, dates, and details.
 - Confirm the existing IT organization label and dates before publishing.
-- Add email, GitHub, LinkedIn, résumé, and portfolio URLs in `src/data/portfolio.ts`.
+- Add email, GitHub, LinkedIn, and portfolio URLs in `src/data/portfolio.ts`.
 
 ## Contact
 

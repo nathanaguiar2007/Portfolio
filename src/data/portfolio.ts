@@ -155,11 +155,9 @@ export const about = {
 };
 
 // Empty strings are intentional placeholders. Add only your confirmed public URLs.
-// For a local résumé, use `${import.meta.env.BASE_URL}resume/your-file.pdf`.
 export const contact = {
   email: "",
   github: "",
   linkedin: "",
-  resume: "",
   portfolio: "",
 };

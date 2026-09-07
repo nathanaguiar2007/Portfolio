@@ -1,9 +1,12 @@
-<!-- BEGIN:nextjs-agent-rules -->
+# Portfolio project
 
-# This is NOT the Next.js you know
+This is a React + TypeScript + Vite application using React Router and regular CSS.
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
-
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
-
-<!-- END:nextjs-agent-rules -->
+- Keep editable portfolio content in `src/data/portfolio.ts`.
+- Keep the design tokens and primary styling in `src/styles.css`.
+- Preserve the warm, rounded design and support reduced motion.
+- Do not add utility CSS frameworks, CSS-in-JS, or invented projects and accomplishments.
+- The primary programming languages are exactly Python, Java, Swift, and C#.
+- Use shared components for page sections and keep asset URLs compatible with the GitHub Pages build.
+- Validate changes with `npm run lint`, `npm run build`, and relevant browser tests.
+- `npm run build:github` uses hash routing and relative asset URLs for GitHub Pages.

@@ -9,7 +9,7 @@ export default function Project() {
   if (!project) return <NotFound />;
 
   return (
-    <div className="section-shell project-page">
+    <article className="section-shell project-page">
       <Link to="/#work" className="text-link back-link">
         ← Selected work
       </Link>
@@ -45,6 +45,6 @@ export default function Project() {
           →
         </span>
       </Link>
-    </div>
+    </article>
   );
 }

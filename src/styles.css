@@ -731,9 +731,6 @@ a:hover .arrow {
 .editorial-layout .section-description {
   margin-top: var(--space-lg);
 }
-.timeline {
-  border-top: 1px solid #cfc7bc;
-}
 .experience-entry {
   padding: var(--space-lg) 0;
   border-bottom: 1px solid #cfc7bc;
@@ -914,6 +911,7 @@ a:hover .arrow {
 .gallery-print figcaption {
   background: linear-gradient(transparent, rgb(17 17 17 / 95%));
 }
+.gallery-tile h2,
 .gallery-tile h3 {
   font-size: 1.2rem;
 }
@@ -1521,3 +1519,39 @@ a:hover .arrow {
     transform: none;
   }
 }
+
+/* Credentials and the longer experience story share the existing palette. */
+.navigation-links { list-style: none; padding: 0; }
+.contact-links { font-style: normal; }
+.experience-preview { align-self: center; }
+.experience-preview > p { color: var(--text-secondary); font-size: 1.15rem; margin-bottom: var(--space-lg); }
+.certificate-grid { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-md); }
+.certificate { height: 100%; padding: clamp(1.5rem, 4vw, 3rem); border: 1px solid var(--border); border-radius: var(--radius-large); background: var(--green-soft); overflow-wrap: anywhere; }
+.certificate-grid > li:nth-child(even) .certificate { background: var(--blue-soft); }
+.certificate h3 { font-size: 1.65rem; margin-bottom: .7rem; }
+.certificate > .eyebrow { margin-bottom: var(--space-xl); }
+.certificate header p, .certificate time, .certificate-date { color: var(--text-secondary); }
+.certificate > p:not(.eyebrow), .certificate time { display: block; margin-top: var(--space-sm); }
+.certificate-image { margin-bottom: var(--space-md); }
+.certificate-image img { max-height: 220px; object-fit: contain; border-radius: var(--radius-small); }
+.experience-page .page-header { max-width: 850px; }
+.experience-introduction, .technical-interests { padding: clamp(1.5rem, 5vw, 4rem); border-radius: var(--radius-feature); background: var(--green-soft); }
+.experience-introduction > p { max-width: 650px; font-size: 1.15rem; }
+.experience-introduction .section-header, .technical-interests .section-header { margin-bottom: var(--space-lg); }
+.story-section { padding-block: var(--space-2xl); border-bottom: 1px solid var(--border); }
+.story-section .section-title { font-size: clamp(2rem, 4vw, 3.2rem); overflow-wrap: anywhere; }
+.story-section .experience-entry { padding-top: 0; border-bottom: 0; }
+.education-copy h3 { font-size: 1.5rem; margin-bottom: var(--space-sm); }
+.education-copy p + p, .education-copy ul + p { margin-top: var(--space-md); }
+.education-copy ul, .approach-list { padding-left: 1.2rem; }
+.education-copy, .approach-list { color: var(--text-secondary); }
+.education-copy h3 { color: var(--text-primary); }
+.approach-list li + li { margin-top: var(--space-md); }
+.technical-interests { margin-top: var(--space-2xl); background: var(--blue-soft); }
+.technical-interests ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .75rem; }
+.technical-interests li { border: 1px solid #b6c9d3; border-radius: var(--radius-pill); padding: .6rem 1rem; }
+@media (max-width: 767px) {
+  .certificate-grid { grid-template-columns: 1fr; }
+}
+
+.project-header h1 { overflow-wrap: anywhere; }

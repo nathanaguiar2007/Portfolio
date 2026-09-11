@@ -3,7 +3,8 @@ import { Link, NavLink } from "react-router";
 
 const navigation = [
   { label: "Work", to: "/#work" },
-  { label: "Experience", to: "/#experience" },
+  { label: "Experience", to: "/experience" },
+  { label: "Certificates", to: "/#certificates" },
   { label: "Design", to: "/design" },
   { label: "About", to: "/about" },
 ];
@@ -53,12 +54,12 @@ export default function Navbar() {
           {open ? "Close" : "Menu"}{" "}
           <span aria-hidden="true">{open ? "−" : "+"}</span>
         </button>
-        <div
+        <ul
           id="navigation-links"
           className={`navigation-links${open ? " is-open" : ""}`}
         >
-          {navigation.map(({ label, to }) =>
-            to.includes("#") ? (
+          {navigation.map(({ label, to }) => (
+            <li key={label}>{to.includes("#") ? (
               <Link key={label} to={to} onClick={() => setOpen(false)}>
                 {label}
               </Link>
@@ -66,9 +67,9 @@ export default function Navbar() {
               <NavLink key={label} to={to} onClick={() => setOpen(false)}>
                 {label}
               </NavLink>
-            ),
-          )}
-        </div>
+            )}</li>
+          ))}
+        </ul>
       </nav>
     </header>
   );

@@ -1,8 +1,8 @@
 import { Link } from "react-router";
-import { experience, projects, skillGroups } from "../data/portfolio";
+import { experienceStory, projects, skillGroups } from "../data/portfolio";
 import AboutSection from "../components/AboutSection";
 import DesignGallery from "../components/DesignGallery";
-import ExperienceEntry from "../components/ExperienceEntry";
+import CertificatesSection from "../components/CertificatesSection";
 import Hero from "../components/Hero";
 import ProjectCard from "../components/ProjectCard";
 import ProjectShowcase from "../components/ProjectShowcase";
@@ -67,10 +67,11 @@ export default function Home() {
             }
             description="Listening carefully, making things, and improving them until they feel right."
           />
-          <div className="timeline">
-            {experience.map((entry) => (
-              <ExperienceEntry key={entry.id} entry={entry} />
-            ))}
+          <div className="experience-preview">
+            <p>{experienceStory.preview}</p>
+            <Link to="/experience" className="text-link">
+              Read more about my experience <span aria-hidden="true">→</span>
+            </Link>
           </div>
         </div>
       </section>
@@ -98,6 +99,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <CertificatesSection />
       <section className="gallery-band">
         <div className="section-shell">
           <SectionHeader eyebrow="Beyond the screen" title="Beyond code.">

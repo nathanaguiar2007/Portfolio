@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import { projects } from "./data/portfolio";
 import About from "./pages/About";
 import Design from "./pages/Design";
+import Experience from "./pages/Experience";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Project from "./pages/Project";
@@ -18,7 +19,7 @@ function RouteEffects() {
     );
     const title =
       project?.title ??
-      { "/": "Portfolio", "/about": "About", "/design": "Design" }[pathname] ??
+      { "/": "Portfolio", "/about": "About", "/experience": "Experience", "/design": "Design" }[pathname] ??
       "Page not found";
     document.title = `${title} — Nathan Aguiar`;
     const description = document.querySelector('meta[name="description"]');
@@ -64,6 +65,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects/:slug" element={<Project />} />
+          <Route path="/experience" element={<Experience />} />
           <Route path="/design" element={<Design />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />

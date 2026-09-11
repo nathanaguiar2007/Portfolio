@@ -9,14 +9,14 @@ export default function Footer() {
 
   return (
     <footer className="footer-shell" id="contact">
-      <div className="contact-section">
+      <section className="contact-section">
         <p className="eyebrow">Have a good idea?</p>
         <h2>Let’s build something.</h2>
         <p>
           I’m always interested in hearing about new projects, opportunities,
           and ideas.
         </p>
-        <div className="contact-links">
+        <address className="contact-links">
           {links.map(({ label, href }) =>
             href ? (
               <a className="pill-link" href={href} key={label}>
@@ -36,8 +36,8 @@ export default function Footer() {
               </span>
             ),
           )}
-        </div>
-      </div>
+        </address>
+      </section>
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} Nathan Aguiar</p>
         <p>Built with curiosity.</p>

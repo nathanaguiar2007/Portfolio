@@ -11,7 +11,7 @@ export default function Design() {
           3D printing, and physical builds.
         </p>
       </header>
-      <DesignGallery />
+      <DesignGallery standalone />
     </div>
   );
 }

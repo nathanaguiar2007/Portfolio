@@ -86,7 +86,8 @@ export const experience: Experience[] = [
       "Supported new-building technology implementation and technology audits.",
       "Helped deploy and configure hundreds of Apple/macOS laptops.",
       "Managed device inventory with Jamf and resolved support incidents through Incident IQ.",
-      "Provided hardware and software troubleshooting for end users.",
+      "Provided hardware and software troubleshooting for staff across multiple buildings.",
+      "Evaluated emerging technology and contributed recommendations for future purchases.",
     ],
     technologies: ["macOS", "Jamf", "Incident IQ"],
   },
@@ -160,4 +161,46 @@ export const contact = {
   github: "",
   linkedin: "",
   portfolio: "",
+};
+
+
+export interface Certificate {
+  id: string;
+  name: string;
+  issuer: string;
+  earned?: { label: string; dateTime: string };
+  description?: string;
+  credentialId?: string;
+  credentialUrl?: string;
+  // Use a public/ relative path (e.g. images/certificate.webp), or an HTTPS URL.
+  image?: { src: string; alt: string };
+  placeholder?: boolean;
+}
+
+// Replace these placeholders with confirmed credentials. Dates use ISO format.
+export const certificates: Certificate[] = [
+  { id: "certificate-1", name: "Certificate Name", issuer: "Issuing Organization", placeholder: true },
+  { id: "certificate-2", name: "Certificate Name", issuer: "Issuing Organization", placeholder: true },
+];
+
+export const experienceStory = {
+  subtitle: "A deeper look at how I work, what I’ve built, and what I’m learning.",
+  about: "I enjoy taking ideas from concept to working product. Moving between software, AI, engineering, and design helps me ask better questions and understand how the pieces fit together.",
+  preview: "From deploying technology across campus facilities to building software, I’m interested in how ideas become useful tools for people.",
+  approach: [
+    "Start with a real problem and understand who it affects.",
+    "Build a functional version to make the idea tangible.",
+    "Test, iterate, and learn from what doesn’t work.",
+    "Understand the underlying systems, beyond the surface.",
+    "Use feedback to improve the product.",
+  ],
+  interests: ["Software engineering", "Artificial intelligence", "Machine learning", "Cybersecurity", "Product development", "Robotics", "Engineering", "Human-centered software"],
+};
+
+export const education = {
+  university: "Purdue University",
+  degree: "B.S. Computer Science",
+  expectedYear: "2030",
+  intendedMinors: ["Artificial Intelligence", "Mathematics"],
+  community: "Entrepreneurship & Innovation Learning Community",
 };

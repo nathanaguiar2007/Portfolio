@@ -1,6 +1,7 @@
 import { designCategories } from "../data/portfolio";
 
-export default function DesignGallery() {
+export default function DesignGallery({ standalone = false }: { standalone?: boolean }) {
+  const Heading = standalone ? "h2" : "h3";
   return (
     <div className="gallery-grid">
       {designCategories.map((category, index) => (
@@ -15,7 +16,7 @@ export default function DesignGallery() {
             <span />
           </div>
           <figcaption>
-            <h3>{category.title}</h3>
+            <Heading>{category.title}</Heading>
             <p>{category.subtitle}</p>
             <span className="gallery-placeholder">
               Project images coming soon

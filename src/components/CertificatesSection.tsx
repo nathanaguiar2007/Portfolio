@@ -19,7 +19,6 @@ export default function CertificatesSection() {
                 <h3>{certificate.name}</h3>
                 <p>{certificate.issuer}</p>
               </header>
-              {certificate.earned ? <time dateTime={certificate.earned.dateTime}>{certificate.earned.label}</time> : <p className="certificate-date">Date to be added</p>}
               {certificate.description && <p>{certificate.description}</p>}
               {certificate.credentialId && <p>Credential ID: {certificate.credentialId}</p>}
               {certificate.credentialUrl && <a className="text-link" href={certificate.credentialUrl}>Verify {certificate.name} <span aria-hidden="true">↗</span></a>}

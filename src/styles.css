@@ -1530,8 +1530,8 @@ a:hover .arrow {
 .certificate-grid > li:nth-child(even) .certificate { background: var(--blue-soft); }
 .certificate h3 { font-size: 1.65rem; margin-bottom: .7rem; }
 .certificate > .eyebrow { margin-bottom: var(--space-xl); }
-.certificate header p, .certificate time, .certificate-date { color: var(--text-secondary); }
-.certificate > p:not(.eyebrow), .certificate time { display: block; margin-top: var(--space-sm); }
+.certificate header p { color: var(--text-secondary); }
+.certificate > p:not(.eyebrow) { display: block; margin-top: var(--space-sm); }
 .certificate-image { margin-bottom: var(--space-md); }
 .certificate-image img { max-height: 220px; object-fit: contain; border-radius: var(--radius-small); }
 .experience-page .page-header { max-width: 850px; }

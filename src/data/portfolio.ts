@@ -168,7 +168,6 @@ export interface Certificate {
   id: string;
   name: string;
   issuer: string;
-  earned?: { label: string; dateTime: string };
   description?: string;
   credentialId?: string;
   credentialUrl?: string;
@@ -177,7 +176,7 @@ export interface Certificate {
   placeholder?: boolean;
 }
 
-// Replace these placeholders with confirmed credentials. Dates use ISO format.
+// Replace these placeholders with confirmed credentials.
 export const certificates: Certificate[] = [
   { id: "certificate-1", name: "Certificate Name", issuer: "Issuing Organization", placeholder: true },
   { id: "certificate-2", name: "Certificate Name", issuer: "Issuing Organization", placeholder: true },

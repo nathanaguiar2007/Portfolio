@@ -106,10 +106,10 @@ test("mobile navigation, Escape, cross-page anchors, and scroll treatment", asyn
   await expect(menu).toHaveAttribute("aria-expanded", "false");
   await expect(page.locator("h1")).toHaveText("Experience");
   await menu.click();
-  await page.getByRole("navigation").getByRole("link", { name: "Certificates", exact: true }).click();
-  await expect(page).toHaveURL("/#certificates");
+  await page.getByRole("navigation").getByRole("link", { name: "Work", exact: true }).click();
+  await expect(page).toHaveURL("/#work");
   await expect(menu).toHaveAttribute("aria-expanded", "false");
-  await expect(page.locator("#certificates")).toBeInViewport();
+  await expect(page.locator("#work")).toBeInViewport();
   await expect(page.locator(".site-header")).toHaveClass(/is-scrolled/);
 });
 
@@ -133,6 +133,8 @@ test("reduced motion, page titles, and unknown routes", async ({ page }) => {
 
 test("credentials, experience facts, semantic hierarchy, and internal links", async ({ page }) => {
   await page.goto("/");
+  await expect(page.locator("#navigation-links a")).toHaveText(["Work", "Experience", "Design", "About"]);
+  await expect(page.locator("#certificates")).not.toContainText(/date|year/i);
   await expect(page.locator("#certificates article")).toHaveCount(2);
   await expect(page.locator("#certificates article").first()).toContainText("Placeholder · Add credential");
   await expect(page.locator("#certificates a, #certificates time")).toHaveCount(0);

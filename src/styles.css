@@ -1555,3 +1555,20 @@ a:hover .arrow {
 }
 
 .project-header h1 { overflow-wrap: anywhere; }
+
+/* Experience reads as a continuous story, with a quiet timeline for the work. */
+.experience-page .page-header { padding-block: clamp(2rem, 6vw, 5rem); }
+.experience-page .page-header .project-tagline { max-width: 670px; }
+.experience-timeline { border-left: 1px solid #cfc7bc; padding-left: clamp(1.5rem, 3vw, 3rem); }
+.experience-timeline .experience-entry { position: relative; max-width: 700px; }
+.experience-timeline .experience-entry::before { content: ""; position: absolute; width: 9px; height: 9px; border-radius: 50%; background: #607f70; left: calc(-1 * clamp(1.5rem, 3vw, 3rem) - 5px); top: .25rem; }
+.experience-page .experience-entry h3 { font-size: clamp(1.8rem, 3vw, 2.8rem); line-height: 1.12; max-width: 690px; }
+.experience-page .experience-company { color: var(--text-primary) !important; font-size: 1.15rem; font-weight: 600; margin-top: 1.2rem; }
+.experience-page .experience-entry > p:nth-of-type(3) { margin-top: var(--space-lg); line-height: 1.65; }
+.experience-page .experience-entry ul { font-size: 1rem; line-height: 1.6; }
+.education-copy h4 { color: var(--text-primary); font-size: 1rem; margin-top: var(--space-lg); }
+.education-copy h4 + ul { margin-top: var(--space-sm); }
+.certificate { transition: transform 250ms ease, box-shadow 250ms ease; }
+.certificate-logo { width: auto; height: 38px; max-width: 150px; object-fit: contain; margin-bottom: var(--space-md); }
+.certificate:hover { transform: translateY(-3px); box-shadow: 0 18px 35px rgb(23 23 23 / 5%); }
+@media (prefers-reduced-motion: reduce) { .certificate:hover { transform: none; } }

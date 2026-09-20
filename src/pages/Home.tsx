@@ -54,7 +54,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section id="experience" className="experience-band">
+      <section className="experience-band">
         <div className="section-shell editorial-layout">
           <SectionHeader
             eyebrow="A little context"
@@ -70,7 +70,7 @@ export default function Home() {
           <div className="experience-preview">
             <p>{experienceStory.preview}</p>
             <Link to="/experience" className="text-link">
-              Read more about my experience <span aria-hidden="true">→</span>
+              Explore my experience <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>

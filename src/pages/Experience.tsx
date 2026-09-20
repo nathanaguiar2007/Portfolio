@@ -4,7 +4,7 @@ import SectionHeader from "../components/SectionHeader";
 
 export default function Experience() {
   return (
-    <article className="section-shell experience-page">
+    <div className="section-shell experience-page">
       <header className="page-header">
         <p className="eyebrow">A little context</p>
         <h1>Experience</h1>
@@ -17,13 +17,13 @@ export default function Experience() {
       </section>
       <section className="story-section editorial-layout">
         <SectionHeader eyebrow="In practice" title="Professional experience" />
-        <div>
+        <div className="experience-timeline">
           {experience.filter((entry) => entry.id !== "robotics").map((entry) => <ExperienceEntry key={entry.id} entry={entry} />)}
         </div>
       </section>
       <section className="story-section editorial-layout">
         <SectionHeader eyebrow="Beyond software" title="Robotics & technical experience" />
-        <div>
+        <div className="experience-timeline">
           {experience.filter((entry) => entry.id === "robotics").map((entry) => <ExperienceEntry key={entry.id} entry={entry} />)}
         </div>
       </section>
@@ -31,10 +31,13 @@ export default function Experience() {
         <SectionHeader eyebrow="Still learning" title="Education" />
         <article className="education-copy">
           <h3>{education.university}</h3>
+          <p>{education.location}</p>
           <p>{education.degree} · Expected <time dateTime={education.expectedYear}>{education.expectedYear}</time></p>
-          <p>Intended minors</p>
+          <h4>Intended minors</h4>
           <ul>{education.intendedMinors.map((minor) => <li key={minor}>{minor}</li>)}</ul>
-          <p>Member, {education.community}</p>
+          <p>{education.community}</p>
+          <h4>Relevant coursework</h4>
+          <ul>{education.coursework.map((course) => <li key={course}>{course}</li>)}</ul>
         </article>
       </section>
       <section className="story-section editorial-layout">
@@ -45,6 +48,6 @@ export default function Experience() {
         <SectionHeader eyebrow="Questions worth exploring" title="Technical interests" />
         <ul>{experienceStory.interests.map((interest) => <li key={interest}>{interest}</li>)}</ul>
       </section>
-    </article>
+    </div>
   );
 }

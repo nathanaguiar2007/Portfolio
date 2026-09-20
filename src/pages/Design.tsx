@@ -2,7 +2,7 @@ import DesignGallery from "../components/DesignGallery";
 
 export default function Design() {
   return (
-    <div className="section-shell design-page">
+    <article className="section-shell design-page">
       <header className="page-header">
         <p className="eyebrow">Engineering & design</p>
         <h1>Beyond code.</h1>
@@ -12,6 +12,6 @@ export default function Design() {
         </p>
       </header>
       <DesignGallery standalone />
-    </div>
+    </article>
   );
 }

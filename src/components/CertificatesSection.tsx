@@ -15,6 +15,9 @@ export default function CertificatesSection() {
                   <img src={/^(https?:)?\/\//.test(certificate.image.src) ? certificate.image.src : `${import.meta.env.BASE_URL}${certificate.image.src.replace(/^\//, "")}`} alt={certificate.image.alt} loading="lazy" />
                 </figure>
               )}
+              {certificate.issuerLogo && (
+                <img className="certificate-logo" src={/^(https?:)?\/\//.test(certificate.issuerLogo.src) ? certificate.issuerLogo.src : `${import.meta.env.BASE_URL}${certificate.issuerLogo.src.replace(/^\//, "")}`} alt={certificate.issuerLogo.alt} loading="lazy" />
+              )}
               <header>
                 <h3>{certificate.name}</h3>
                 <p>{certificate.issuer}</p>

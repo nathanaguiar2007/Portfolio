@@ -4,8 +4,8 @@ export default function ExperienceEntry({ entry }: { entry: Experience }) {
   return (
     <article className="experience-entry">
       <p className="eyebrow">{entry.dates}</p>
+      <p className="experience-company">{entry.company}</p>
       <h3>{entry.title}</h3>
-      {entry.company && <p className="experience-company">{entry.company}</p>}
       <p>{entry.description}</p>
       {entry.accomplishments.length > 0 && (
         <ul>

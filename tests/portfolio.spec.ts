@@ -5,7 +5,7 @@ const pages = [
   { path: "/projects/dormonomics", heading: "Dormonomics" },
   {
     path: "/projects/food-ai",
-    heading: "AI / Food Recognition & Macronutrient Research",
+    heading: "Macronutrient Recognition Using Computer Vision",
   },
   { path: "/experience", heading: "Experience" },
   { path: "/design", heading: "Beyond code." },
@@ -79,7 +79,7 @@ test("real projects, exact primary languages, and clear placeholders", async ({
   await page
     .getByRole("link", { name: "Explore the food recognition research" })
     .click();
-  await expect(page.locator("h1")).toContainText("Macronutrient Research");
+  await expect(page.locator("h1")).toContainText("Macronutrient Recognition");
   await page.goBack();
   await expect(page.locator("h1")).toHaveText("Dormonomics");
 });
@@ -138,9 +138,8 @@ test("credentials, experience facts, semantic hierarchy, and internal links", as
   await expect(page.locator("#certificates article")).toHaveCount(2);
   await expect(page.locator("#certificates article").first()).toContainText("Placeholder · Add credential");
   await expect(page.locator("#certificates a, #certificates time")).toHaveCount(0);
-  await expect(page.locator("#experience .experience-entry")).toHaveCount(0);
-  await page.getByRole("link", { name: "Read more about my experience" }).click();
-  for (const fact of ["hundreds of Apple/macOS laptops", "multiple buildings", "emerging technology", "future purchases", "Jamf", "Incident IQ", "B.S. Computer Science", "2030", "Entrepreneurship & Innovation Learning Community"]) {
+  await page.getByRole("link", { name: "Explore my experience" }).click();
+  for (const fact of ["Sidwell Friends School", "300+ macOS devices", "1,000+ devices", "150+ classrooms", "Jamf Pro", "Incident IQ", "UP Robotics Inc.", "100+ students", "B.S. Computer Science", "2030", "Entrepreneurship & Innovation Learning Community"]) {
     await expect(page.locator("main")).toContainText(fact);
   }
   for (const route of pages) {

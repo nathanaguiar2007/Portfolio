@@ -30,7 +30,7 @@ export default function ProjectShowcase({
           <p className="showcase-body">{project.description}</p>
           {!isFinance && (
             <p className="research-note">
-              Contributed to research that was published and presented.
+              I contributed to research that was published and presented.
             </p>
           )}
           <div className="tag-row">

@@ -15,24 +15,24 @@ export const projects: Project[] = [
     title: "Dormonomics",
     tagline: "Personal finance. Built for college.",
     description:
-      "An iOS personal-finance application designed around college life. A calmer way for students to understand spending, manage accounts, and make better financial decisions.",
+      "I’m building an iOS personal-finance application around college life: a calmer way for students to understand spending, manage accounts, and make better financial decisions.",
     status: "Work in progress",
     technologies: ["Swift", "SwiftUI", "Supabase", "AI tooling"],
     sections: [
       {
         title: "The idea",
         content:
-          "College life brings its own financial challenges: meal plans, dorm expenses, part-time income, and a limited budget. Dormonomics is being built with that everyday context in mind.",
+          "College life brings its own financial challenges: meal plans, dorm expenses, part-time income, and a limited budget. I’m building Dormonomics with that everyday context in mind.",
       },
       {
         title: "The build",
         content:
-          "Built with SwiftUI, Supabase, and AI tooling, the app is taking shape around spending tracking, semester budgeting, receipt and screenshot parsing, campus deals, spending insights, and personal-finance widgets.",
+          "I’m using SwiftUI, Supabase, and AI tooling to build spending tracking, semester budgeting, receipt and screenshot parsing, campus deals, spending insights, and personal-finance widgets.",
       },
       {
         title: "What comes next",
         content:
-          "Dormonomics is a work in progress. Screenshots and more development details will be added as the application takes shape.",
+          "Dormonomics is a work in progress. I’ll add screenshots and more development details as the application takes shape.",
       },
     ],
   },
@@ -41,7 +41,7 @@ export const projects: Project[] = [
     title: "Macronutrient Recognition Using Computer Vision",
     tagline: "Teaching machines to understand food.",
     description:
-      "A computer-vision and machine-learning project focused on recognizing food and connecting predictions with nutritional and macronutrient information.",
+      "I built a computer-vision and machine-learning project focused on recognizing food and connecting predictions with nutritional and macronutrient information.",
     status: "Research published and presented",
     technologies: [
       "Python",
@@ -53,12 +53,12 @@ export const projects: Project[] = [
       {
         title: "The project",
         content:
-          "A convolutional neural network trained on 101,000 images across 101 food categories reached 91% validation accuracy. The work explores food recognition for nutrition and macronutrient applications.",
+          "I built and trained a convolutional neural network on 101,000 images across 101 food categories, reaching 91% validation accuracy. I explored how food recognition could support nutrition and macronutrient applications.",
       },
       {
         title: "Research contribution",
         content:
-          "This work contributed to research that was published and presented. Publication details and research visuals will be added here when available.",
+          "I contributed this work to research that was published and presented. I’ll add publication details and research visuals here when they’re available.",
       },
     ],
   },
@@ -83,10 +83,10 @@ export const experience: Experience[] = [
     description:
       "I supported the technology rollout for a new Upper School campus, working across device deployment, classroom audits, and day-to-day troubleshooting.",
     accomplishments: [
-      "Configured, tested, and deployed 300+ macOS devices for students and faculty.",
-      "Audited 1,000+ devices across 150+ classrooms.",
-      "Diagnosed hardware, software, authentication, and connectivity issues using Jamf Pro and Incident IQ.",
-      "Assessed emerging technologies to help inform future IT purchasing decisions.",
+      "I configured, tested, and deployed 300+ macOS devices for students and faculty.",
+      "I audited 1,000+ devices across 150+ classrooms.",
+      "I diagnosed hardware, software, authentication, and connectivity issues using Jamf Pro and Incident IQ.",
+      "I assessed emerging technologies to help inform future IT purchasing decisions.",
     ],
     technologies: ["macOS", "Jamf Pro", "Incident IQ"],
   },
@@ -97,8 +97,8 @@ export const experience: Experience[] = [
     dates: "2024–2026",
     description: "I taught robot design, programming, and drone coding to 100+ students in grades 1–8, helping them learn by building and testing their ideas.",
     accomplishments: [
-      "Mentored FLL and FTC teams and developed curriculum involving LEGO SPIKE and FTC Robotics.",
-      "Redesigned the company website in Wix to improve navigability.",
+      "I mentored FLL and FTC teams and developed curriculum involving LEGO SPIKE and FTC Robotics.",
+      "I redesigned the company website in Wix to improve navigability.",
     ],
     technologies: ["LEGO SPIKE", "FTC Robotics", "Wix"],
   },
@@ -145,7 +145,7 @@ export const designCategories = [
 
 export const about = {
   introduction:
-    "Nathan Aguiar is a Computer Science student at Purdue University interested in software engineering, artificial intelligence, cybersecurity, product development, robotics, and engineering.",
+    "I’m a Computer Science student at Purdue University interested in software engineering, artificial intelligence, cybersecurity, product development, robotics, and engineering.",
   description:
     "I’m interested in the moment an abstract idea becomes a thing someone can use. Whether it’s software, a machine learning model, or a physical build, I like moving between the big picture and the details that make it feel right.",
 };
@@ -163,24 +163,17 @@ export interface Certificate {
   id: string;
   name: string;
   issuer: string;
-  description?: string;
-  credentialId?: string;
-  credentialUrl?: string;
-  // Use a public/ relative path (e.g. images/certificate.webp), or an HTTPS URL.
-  image?: { src: string; alt: string };
-  issuerLogo?: { src: string; alt: string };
-  placeholder?: boolean;
 }
 
-// Replace these placeholders with confirmed credentials.
 export const certificates: Certificate[] = [
-  { id: "certificate-1", name: "Certificate Name", issuer: "Issuing Organization", placeholder: true },
-  { id: "certificate-2", name: "Certificate Name", issuer: "Issuing Organization", placeholder: true },
+  { id: "future-you-ai", name: "Future You — Leveraging AI for Success", issuer: "Northeastern University" },
+  { id: "python-scripting", name: "Python Scripting", issuer: "Duke University" },
+  { id: "ai-travel-agent", name: "Build an AI Travel Agent App with OpenAI", issuer: "Scrimba" },
 ];
 
 export const experienceStory = {
   subtitle: "A deeper look at how I work, what I’ve built, and what I’m learning.",
-  about: "I enjoy taking ideas from concept to working product. Moving between software, AI, engineering, and design helps me ask better questions and understand how the pieces fit together.",
+  about: "I enjoy taking ideas from an initial concept to something I can build, test, and improve. Moving between software, AI, engineering, and design helps me ask better questions and understand how the pieces fit together.",
   preview: "From a new school campus technology rollout to teaching robotics, I’ve learned by helping people use the things I build and support.",
   approach: [
     "Start with a real problem and understand it before adding complexity.",

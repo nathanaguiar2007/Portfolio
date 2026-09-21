@@ -55,7 +55,7 @@ for (const width of [1440, 1024, 768, 390, 320]) {
   });
 }
 
-test("real projects, exact primary languages, and clear placeholders", async ({
+test("real projects, exact primary languages, and project placeholders", async ({
   page,
 }) => {
   await page.goto("/");
@@ -135,8 +135,18 @@ test("credentials, experience facts, semantic hierarchy, and internal links", as
   await page.goto("/");
   await expect(page.locator("#navigation-links a")).toHaveText(["Work", "Experience", "Design", "About"]);
   await expect(page.locator("#certificates")).not.toContainText(/date|year/i);
-  await expect(page.locator("#certificates article")).toHaveCount(2);
-  await expect(page.locator("#certificates article").first()).toContainText("Placeholder · Add credential");
+  await expect(page.locator("#certificates article")).toHaveCount(3);
+  await expect(page.locator("#certificates article h3")).toHaveText([
+    "Future You — Leveraging AI for Success",
+    "Python Scripting",
+    "Build an AI Travel Agent App with OpenAI",
+  ]);
+  await expect(page.locator("#certificates article header p")).toHaveText([
+    "Northeastern University",
+    "Duke University",
+    "Scrimba",
+  ]);
+  await expect(page.locator("#certificates")).not.toContainText(/Certificate Name|Issuing Organization|Add Credential/);
   await expect(page.locator("#certificates a, #certificates time")).toHaveCount(0);
   await page.getByRole("link", { name: "Explore my experience" }).click();
   for (const fact of ["Sidwell Friends School", "300+ macOS devices", "1,000+ devices", "150+ classrooms", "Jamf Pro", "Incident IQ", "UP Robotics Inc.", "100+ students", "B.S. Computer Science", "2030", "Entrepreneurship & Innovation Learning Community"]) {

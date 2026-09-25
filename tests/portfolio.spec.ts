@@ -135,16 +135,18 @@ test("credentials, experience facts, semantic hierarchy, and internal links", as
   await page.goto("/");
   await expect(page.locator("#navigation-links a")).toHaveText(["Work", "Experience", "Design", "About"]);
   await expect(page.locator("#certificates")).not.toContainText(/date|year/i);
-  await expect(page.locator("#certificates article")).toHaveCount(3);
+  await expect(page.locator("#certificates article")).toHaveCount(4);
   await expect(page.locator("#certificates article h3")).toHaveText([
     "Future You — Leveraging AI for Success",
     "Python Scripting",
     "Build an AI Travel Agent App with OpenAI",
+    "AWS Cloud Practitioner Essentials",
   ]);
   await expect(page.locator("#certificates article header p")).toHaveText([
     "Northeastern University",
     "Duke University",
     "Scrimba",
+    "Amazon Web Services (AWS)",
   ]);
   await expect(page.locator("#certificates")).not.toContainText(/Certificate Name|Issuing Organization|Add Credential/);
   await expect(page.locator("#certificates a, #certificates time")).toHaveCount(0);

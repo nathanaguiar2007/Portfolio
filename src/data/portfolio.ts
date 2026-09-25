@@ -169,6 +169,7 @@ export const certificates: Certificate[] = [
   { id: "future-you-ai", name: "Future You — Leveraging AI for Success", issuer: "Northeastern University" },
   { id: "python-scripting", name: "Python Scripting", issuer: "Duke University" },
   { id: "ai-travel-agent", name: "Build an AI Travel Agent App with OpenAI", issuer: "Scrimba" },
+  { id: "aws-cloud-practitioner-essentials", name: "AWS Cloud Practitioner Essentials", issuer: "Amazon Web Services (AWS)" },
 ];
 
 export const experienceStory = {

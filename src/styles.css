@@ -1525,7 +1525,7 @@ a:hover .arrow {
 .contact-links { font-style: normal; }
 .experience-preview { align-self: center; }
 .experience-preview > p { color: var(--text-secondary); font-size: 1.15rem; margin-bottom: var(--space-lg); }
-.certificate-grid { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-md); }
+.certificate-grid { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-md); }
 .certificate { height: 100%; padding: clamp(1.5rem, 4vw, 3rem); border: 1px solid var(--border); border-radius: var(--radius-large); background: var(--green-soft); overflow-wrap: anywhere; }
 .certificate-grid > li:nth-child(even) .certificate { background: var(--blue-soft); }
 .certificate h3 { font-size: 1.65rem; margin-bottom: .7rem; }
@@ -1551,11 +1551,6 @@ a:hover .arrow {
 @media (max-width: 767px) {
   .certificate-grid { grid-template-columns: 1fr; }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
-  .certificate-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .certificate-grid > li:last-child { grid-column: 1 / -1; }
-}
-
 .project-header h1 { overflow-wrap: anywhere; }
 
 /* Experience reads as a continuous story, with a quiet timeline for the work. */
